@@ -18,14 +18,13 @@ export default function Content () {
     <p>
       this is still in early stages.
     </p>
-    <p>TODO:
+    <p>TODO:</p>
      <ul tw='list-disc pl-2 pb-2'>
         <li>complete jamstack by integrating markdown for easier articles</li>
         <li>improve container ui, use typography for better formatting</li>
         <li>figure out how the page should look on mobile</li>
         <li>for the love of god, start working on actual scenes instead of getting distracted by code architecture and ui design (i can't help it, react is so good!)</li>
      </ul>
-    </p>
   </section>
   )
 }

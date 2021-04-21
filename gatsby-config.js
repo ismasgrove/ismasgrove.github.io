@@ -4,8 +4,6 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-
-
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -29,6 +27,14 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
-    'gatsby-transformer-remark'
+    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'ismasgrove',
+        start_url: '/',
+        icon: 'src/images/icon-by-javier-guerrero-diaz-javier.png'
+      }
+    }
   ]
 }

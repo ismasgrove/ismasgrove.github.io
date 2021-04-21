@@ -16,7 +16,7 @@ const footer = (
 </Footer>)
 
 const navbar = (
-  <Navbar titles={['home', 'about', 'articles']}/>
+  <Navbar titles={['home', 'placebo']}/>
 )
 
 export default function Home () {
@@ -27,7 +27,7 @@ export default function Home () {
         <Content/>
         {footer}
       </Container>
-      <Scene/>
+        <Scene />
     </Layout>
   )
 }
