@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { Link } from 'gatsby'
 import Container from '../components/Container'
 import Layout from '../components/Layout'
@@ -22,6 +23,10 @@ const navbar = (
 export default function Home () {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet='utf8' />
+        <title>ismasgrove</title>
+      </Helmet>
       <Container>
         {navbar}
         <Content/>
