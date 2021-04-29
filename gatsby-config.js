@@ -10,15 +10,7 @@ module.exports = {
     title: 'ismasgrove'
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-emotion',
-      options: {
-        postCssPlugins: [
-          require('tailwindcss'),
-          require('./tailwind.config.js')
-        ]
-      }
-    },
+    'gatsby-plugin-emotion',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -35,6 +27,12 @@ module.exports = {
         name: 'ismasgrove',
         start_url: '/',
         icon: 'src/images/icon-by-javier-guerrero-diaz-javier.png'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve('./src/components/Layout.js')
       }
     }
   ]

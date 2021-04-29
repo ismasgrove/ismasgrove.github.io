@@ -1,4 +1,7 @@
-# what is this?
+---
+path: '/what-is-this'
+title: 'what is this?'
+---
 
 when I made the other website, I opted into using plain html/scss/js because I believed it would be simpler for my very minimal purpose (i need to ask myself more whether simplicity should entail simpler tools or simpler process). but, as is actually written on there almost since inception, the reason people don't really do that anymore is because of 1-efficiency and 2-content management. so I decided to follow suit.
 
@@ -10,9 +13,12 @@ an unplanned but very welcome change was also the adoption of react-three. learn
 
 this is still in early stages.
 
-TODO:
+### TODO
 
-- complete jamstack by integrating markdown for easier articles
-- improve container ui, use typography for better formatting
+- ~~complete jamstack by integrating markdown for easier articles~~
+- improve container ui, ~~use typography for better formatting~~
 - figure out how the page should look on mobile
-- for the love of god, start working on actual scenes instead of getting distracted by code architecture and ui design (i can't help it, react is so good!)
+- for the love of god, start working on actual scenes instead of getting distracted by code architecture and ui design
+- improve code quality by utilizing styled components and others for more minimal jsx
+- figure out how to structure background scenes for easy and smooth transitions
+- add a 404 page

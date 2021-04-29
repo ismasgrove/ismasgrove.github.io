@@ -1,38 +1,22 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { Link } from 'gatsby'
-import Container from '../components/Container'
-import Layout from '../components/Layout'
-import Scene from '../components/Scene'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import Content from '../components/Content'
 import 'twin.macro'
 
-const footerInfo = '2021.'
-
-const footer = (
-<Footer>
-    <Link to="/about/">{footerInfo}</Link>
-</Footer>)
-
-const navbar = (
-  <Navbar titles={['home', 'placebo']}/>
-)
+/*
+      <Link to='/posts/what-is-this'>
+        post
+      </Link>
+      <br/>
+      <Link to='/posts/post-2'>
+        post2
+      </Link>
+*/
 
 export default function Home () {
   return (
-    <Layout>
-      <Helmet>
-        <meta charSet='utf8' />
-        <title>ismasgrove</title>
-      </Helmet>
-      <Container>
-        {navbar}
-        <Content/>
-        {footer}
-      </Container>
-        <Scene />
-    </Layout>
+    <div tw='prose'>
+      <h2>work in progress</h2>
+      <p>you can click <Link to='/posts/what-is-this'>here</Link> for more details</p>
+    </div>
   )
 }
