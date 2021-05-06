@@ -29,18 +29,19 @@ const navbar = (
 )
 
 const Layout = ({ children, ...rest }) => (
-  <div tw='flex overflow-hidden h-screen'{...rest}>
+  <div tw='flex flex-col lg:flex-row lg:overflow-hidden h-screen'{...rest}>
     <GlobalStyles />
         <Helmet>
         <meta charSet='utf8' />
         <title>ismasgrove</title>
     </Helmet>
-      <Container>
+
+    <Container>
         {navbar}
       <div tw='overflow-auto flex-grow p-2.5'>{children}</div>
         {footer}
-      </Container>
-        <Scene />
+    </Container>
+    <Scene />
     </div>
 )
 

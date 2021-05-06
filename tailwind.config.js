@@ -2,6 +2,15 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    container: {
+      /* screens: {
+        sm: '100%',
+        md: '100%',
+        lg: { min: '50px' },
+        xl: { min: '200px' },
+        '2xl': { min: '400px' }
+      } */
+    },
     fontFamily: {
       mono: ['Consolas']
     },

@@ -86,12 +86,12 @@ const CameraMove = () => {
   return null
 }
 
-export default function Scene () {
+export default function Scene (props) {
   const [light, lightSet] = useState()
   const [spot, spotSet] = useState()
   const helpersVisible = false
   return (
-    <div tw='fixed h-full w-full'>
+    <div tw='relative lg:fixed h-full w-full' {...props}>
       <Canvas camera={{ fov: 45, position: [0, 10, 0] }} shadows tw='bg-gray-700' >
         <ambientLight />
         <pointLight castShadow shadow-camera-near={10} shadow-mapSize-width={1024} shadow-mapSize-height={1024} shadow-camera-far={60} position={[60 / 4, 10, -50 / 4]}
