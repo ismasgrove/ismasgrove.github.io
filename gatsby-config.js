@@ -10,7 +10,7 @@ module.exports = {
     title: 'ismasgrove'
   },
   plugins: [
-    'gatsby-plugin-emotion',
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -27,12 +27,6 @@ module.exports = {
         name: 'ismasgrove',
         start_url: '/',
         icon: 'src/images/icon-by-javier-guerrero-diaz-javier.png'
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-layout',
-      options: {
-        component: require.resolve('./src/components/Layout.js')
       }
     }
   ]

@@ -2,14 +2,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import tw from 'twin.macro'
 
+
+const ContentTitle = tw.h2`
+text-2xl prose prose-green
+`
+
 export default function Content ({ data }) {
   const post = data.markdownRemark
-
-  const ContentTitle = tw.h2`
-    text-2xl
-  `
-
-  console.log(post.html)
 
   return (
     <div>

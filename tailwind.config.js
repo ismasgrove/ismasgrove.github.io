@@ -1,20 +1,18 @@
 module.exports = {
   purge: ['./src/**/*.{js,jsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
-    container: {
-      /* screens: {
-        sm: '100%',
-        md: '100%',
-        lg: { min: '50px' },
-        xl: { min: '200px' },
-        '2xl': { min: '400px' }
-      } */
-    },
-    fontFamily: {
-      mono: ['Consolas']
-    },
     extend: {
+      backgroundColor: {
+        primary: "var(--bg-primary)",
+        secondary: "var(--bg-secondary)",
+        tertiary: "var(--color-primary)"
+      },
+      textColor: {
+        primary: "var(--text-primary)",
+        secondary: "var(--text-secondary)",
+        tertiary: "var(--color-primary)"
+      },
       zIndex: {
         '-1': '-1'
       },
@@ -54,6 +52,7 @@ module.exports = {
     extend: {}
   },
   corePlugins: {
+    preflight: false,
   },
   plugins: [
     require('@tailwindcss/typography')

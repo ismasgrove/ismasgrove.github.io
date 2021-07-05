@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Helmet } from 'react-helmet'
-import Container from '../components/Container'
-import Scene from '../components/Scene'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import { GlobalStyles } from 'twin.macro'
+import { GlobalStyles } from 'twin.macro' 
+import StylesBase from './StylesBase'
+import Scene from './Scene'
+import Container from './Container'
+import Footer from './Footer'
+import Navbar from './Navbar'
 
-const footerInfo = '2021.'
+const footerInfo = 'footer.'
 const navbarObjs =
 {
   home: {
@@ -19,30 +20,36 @@ const navbarObjs =
   }
 }
 
-const footer = (
-<Footer>
-    {footerInfo}
-</Footer>)
-
 const navbar = (
-  <Navbar items={navbarObjs}/>
+  <Navbar tw='pl-4 pb-2 pt-8  border-b border-black' items={navbarObjs} />
 )
 
-const Layout = ({ children, ...rest }) => (
-  <div tw='flex flex-col lg:flex-row lg:overflow-hidden h-screen'{...rest}>
+
+const footer = (
+  <Footer tw='bg-secondary'>
+    {footerInfo}
+  </Footer>)
+
+  
+const PostContainer = ({ children }) => <div tw='overflow-auto flex-grow p-2'>{children}</div>
+
+const Layout = ({ children }) => {
+  return (<div tw='flex flex-col lg:flex-row lg:overflow-hidden h-screen'>
     <GlobalStyles />
-        <Helmet>
-        <meta charSet='utf8' />
-        <title>ismasgrove</title>
+    <StylesBase />
+    <Helmet>
+      <meta charSet='utf8' />
+      <title>ismasgrove</title>
     </Helmet>
-
-    <Container>
+      <Container>
         {navbar}
-      <div tw='overflow-auto flex-grow p-2.5'>{children}</div>
-        {footer}
-    </Container>
+        <PostContainer>
+          {children}
+        </PostContainer>
+      {footer}
+      </Container>    
     <Scene />
-    </div>
-)
+  </div>)
+}
 
 export default Layout
