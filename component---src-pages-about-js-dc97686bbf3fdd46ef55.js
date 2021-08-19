@@ -1,2 +1,0 @@
-(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[682],{8012:function(t,e,M){"use strict";M.r(e),M.d(e,{default:function(){return n}});M(7294);var l=M(3431);function r(t){return(0,l.tZ)("h1",null,t.headerText)}function n(){return(0,l.tZ)("div",{style:{color:"teal"}},(0,l.tZ)(r,{headerText:"About ME"}),(0,l.tZ)("p",null,"HMMM"),(0,l.tZ)("p",null,"HMMMMMMMMMMMMMMM"))}}}]);
-//# sourceMappingURL=component---src-pages-about-js-dc97686bbf3fdd46ef55.js.map
