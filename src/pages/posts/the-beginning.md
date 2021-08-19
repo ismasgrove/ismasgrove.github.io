@@ -1,6 +1,6 @@
 ---
-path: '/what-is-this'
-title: 'what is this?'
+path: '/the-beginning'
+title: 'the beginning'
 ---
 
 when I made the other website, I opted into using plain html/scss/js because I believed it would be simpler for my very minimal purpose (i need to ask myself more whether simplicity should entail simpler tools or simpler process). but, as is actually written on there almost since inception, the reason people don't really do that anymore is because of 1-efficiency and 2-content management. so I decided to follow suit.

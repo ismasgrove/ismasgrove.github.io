@@ -7,26 +7,26 @@ import Container from './Container'
 import Footer from './Footer'
 import Navbar from './Navbar'
 
-const footerInfo = 'footer.'
+const footerInfo = '2020 ©'
 const navbarObjs =
 {
   home: {
     title: 'home',
     link: '/'
   },
-  placebo: {
-    title: 'placebo',
-    link: '/'
+  about: {
+    title: 'about',
+    link: '/about'
   }
 }
 
 const navbar = (
-  <Navbar tw='pl-4 pb-2 pt-8  border-b border-black' items={navbarObjs} />
+  <Navbar tw='pl-4 pb-2 pt-8 border-b border-gray-500' items={navbarObjs} />
 )
 
 
 const footer = (
-  <Footer tw='bg-secondary'>
+  <Footer tw='border-t border-gray-500'>
     {footerInfo}
   </Footer>)
 
@@ -37,18 +37,20 @@ const Layout = ({ children }) => {
   return (<div tw='flex flex-col lg:flex-row lg:overflow-hidden h-screen'>
     <GlobalStyles />
     <StylesBase />
-    <Helmet>
+    <Helmet htmlAttributes={{
+      lang: 'en'
+    }}>
       <meta charSet='utf8' />
       <title>ismasgrove</title>
     </Helmet>
+    <Scene />
       <Container>
         {navbar}
         <PostContainer>
           {children}
         </PostContainer>
       {footer}
-      </Container>    
-    <Scene />
+      </Container>
   </div>)
 }
 

@@ -1,0 +1,171 @@
+{
+  "accessors": [
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 963,
+      "max": [
+        77.003494262695312,
+        34.583259582519531,
+        55.365901947021484
+      ],
+      "min": [
+        -74.950912475585938,
+        -79.040931701660156,
+        -7.62939453125e-06
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 11556,
+      "componentType": 5126,
+      "count": 963,
+      "max": [
+        0.97412854433059692,
+        1,
+        0.9955136775970459
+      ],
+      "min": [
+        -0.97662681341171265,
+        -1,
+        -0.99396103620529175
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 2592,
+      "max": [
+        962
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "heavy9 (https://sketchfab.com/heavy9)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/arrow-point-pendant-e2cafa55bb5541b3a42b76917fc14af0",
+      "title": "arrow point pendant"
+    },
+    "generator": "Sketchfab-8.80.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 10368,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 23112,
+      "byteOffset": 10368,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 33480,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Scene_-_Root",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0
+          },
+          "indices": 2,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1,
+        1.7853747624282703e-32,
+        -1.6081226229577292e-16,
+        0,
+        8.0068364242718248e-33,
+        1,
+        1.6081226229577292e-16,
+        0,
+        1.6081226229577292e-16,
+        -1.6081226229577292e-16,
+        1,
+        0,
+        -4.4408920985006262e-15,
+        3.5527136788005009e-15,
+        3.5527136788005009e-15,
+        1
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "4599091d7660429684de6c77260d20dc.stl.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": ""
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
+

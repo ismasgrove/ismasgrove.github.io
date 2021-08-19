@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { useFrame } from '@react-three/fiber'
 import { Sky } from '@react-three/drei'
 import { useControls } from 'leva'
+import BackgroundCanvas from '../components/BackgroundCanvas'
+
 
 const Plane = props => {
   const plane = useRef()
@@ -99,7 +101,7 @@ export default function CrystalDemo (props) {
   const helpersVisible = false
 
   return (
-      <Canvas camera={{ fov: 45, position: [0, 10, 0] }} shadows >
+      <BackgroundCanvas camera={{ fov: 45, position: [0, 10, 0] }} shadows >
         <ambientLight />
         <pointLight castShadow shadow-camera-near={10} shadow-mapSize-width={1024} shadow-mapSize-height={1024} shadow-camera-far={60} position={[60 / 4, 10, -50 / 4]}
           args={[0xffffff, 5, 50, 2]} ref={lightSet} />
@@ -114,6 +116,6 @@ export default function CrystalDemo (props) {
         <Plane color={planeColor} rotation={[-Math.PI / 2, 0, 0]} receiveShadow position={[0, -4, 0]} />
         <CameraMove />
         <Sky />
-        </Canvas>
+        </BackgroundCanvas>
   )
 }

@@ -1,10 +1,21 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { navigate } from 'gatsby'
+import tw, { styled } from 'twin.macro'
 
-import 'twin.macro'
+const StyledButton = styled.button(() => [
+  tw`mr-4 text-lg hover:cursor-pointer`
+])
+
+const StyledNavButton = ({ link, title }) => {
+  return <StyledButton
+  onClick={() => navigate(link)}
+  >
+    {title}
+  </StyledButton>
+}
 
 export default function NavButton (props) {
   return (
-    <Link tw='mr-4' to={props.link}>{props.title}</Link>
+    <StyledNavButton link={props.link} title={props.title}/>
   )
 }

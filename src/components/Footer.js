@@ -1,5 +1,6 @@
 import React from 'react'
+import 'twin.macro'
 
 export default function Footer ({ children, ...rest }) {
-  return <div {...rest}>{children}</div>
+  return <footer tw='pl-2' {...rest}>{children}</footer>
 }
