@@ -23,6 +23,6 @@ export default function Home() {
     <p>though there's nothing here so far. wip.</p>
     <p>here's a temporary scene selection tool until I get a more pleasant presenation ready</p>
     <SceneSelect title='select background scene' />
-    <p>what follows is to do some proper routing and give each scene its own page with a description. also a better selection menu.</p>
+    <p>what follows is to do some proper routing and give each scene its own page with a description. also a better selection menu. and some sort of a progress indicator for heavier scenes.</p>
   </>)
 }
