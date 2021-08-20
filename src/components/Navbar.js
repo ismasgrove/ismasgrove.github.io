@@ -13,8 +13,9 @@ const ThemeToggleButton = styled.button(({isDark}) => {
 
 const ThemeToggle = (props) => {
   const { theme, setTheme } = useContext(ThemeContext)
-  const isDark = () => theme === 'dark'  
-return (
+  const isDark = () => theme === 'dark'
+  
+  return (
     <ThemeToggleButton isDark={isDark}
       title='toggle light/dark mode'
       onClick={() => setTheme(isDark() ? 'light' : 'dark')}

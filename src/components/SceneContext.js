@@ -5,7 +5,7 @@ const SceneContext = createContext()
 
 const SceneProvider = ({ children }) => {
 
-    const [scene, setScene] = useState(scenes.CRYSTAL)
+    const [scene, setScene] = useState(scenes.FLUX)
 
     return (
         <SceneContext.Provider value={{ scene, setScene }}>
