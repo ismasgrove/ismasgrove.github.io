@@ -66,11 +66,19 @@ function Spheres({ radius, spheres, palette }) {
     position: [Math.random() * 9.8 - 5, Math.random() * -2 + 4, Math.random() * 5.8 - 3]
   }))
 
+  const randomArray = useMemo(() => {
+    const array = []
+    for (let i = 0; i < spheres; i++) {
+      array.push(Math.floor(Math.random() * palette.length))
+    }
+    return array
+  }, [])
+
   const colors = useMemo(() => {
     const array = new Float32Array(spheres * 3)
     const color = new THREE.Color()
     for (let i = 0; i < spheres; i++) {
-      const col = palette[Math.floor(Math.random() * palette.length)]
+      const col = palette[randomArray[i]]
       color.set(col).convertSRGBToLinear().toArray(array, i*3)
     }
     return array;
