@@ -2,5 +2,9 @@ import React from 'react'
 import 'twin.macro'
 
 export default function Footer ({ children, ...rest }) {
-  return <footer tw='pl-2' {...rest}>{children}</footer>
+  return (
+    <div tw='prose z-10 bg-primary border-b-2 lg:rounded-t-lg border-color[var(--accents-color)]' {...rest}>
+      {children}
+    </div>
+  )
 }

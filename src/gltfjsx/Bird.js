@@ -6,7 +6,7 @@ Author: sketchfab.com/zacxophone
 import React, { useRef, useMemo, useEffect } from 'react'
 import { useGraph } from '@react-three/fiber'
 import { useGLTF, useAnimations } from '@react-three/drei'
-import { SkeletonUtils } from 'three/examples/jsm/utils/SkeletonUtils'
+import * as SkeletonUtils from 'three/examples/jsm/utils/SkeletonUtils'
 
 const Bird = React.forwardRef((props, ref) => {
   const group = useRef()

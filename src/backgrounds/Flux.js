@@ -28,7 +28,7 @@ const TileStack = ({x, z}) => {
     const planes = []
     for (let i =-50; i <= 50; i+=10) {
         planes.push(
-            <Tile position={[x, i, z]} rotation={[0, 0, 0]} />
+            <Tile key={i} position={[x, i, z]} rotation={[0, 0, 0]} />
         )
     }
 
@@ -47,10 +47,10 @@ const TileForest = () => {
 
     for (let i = -60; i <= 60; i += 10) {
         forest.push(
-            <TileStack x={i} z={i} />,
-            <TileStack x={i} z={-i} />,
-             <TileStack x={0} z={i} />,
-            <TileStack x={i} z={0} />,
+            <TileStack key={[i, 0]} x={i} z={i} />,
+            <TileStack key={[i, 1]} x={i} z={-i} />,
+             <TileStack key={[i, 2]} x={0} z={i} />,
+            <TileStack key={[i, 3]} x={i} z={0} />,
         )
     }
 

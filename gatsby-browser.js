@@ -7,10 +7,8 @@ export const wrapRootElement = ({ element }) => (
     <SceneProvider><ThemeProvider>{element}</ThemeProvider></SceneProvider>
 )
 
-export const wrapPageElement = ({ element }) => {
-    return (
+export const wrapPageElement = ({ element }) => (
         <Layout>
             {element}
         </Layout>
-    )
-}
+)

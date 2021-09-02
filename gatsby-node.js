@@ -1,6 +1,24 @@
 
 const { createFilePath } = require('gatsby-source-filesystem')
 
+exports.onCreateWebpackConfig = ({
+  actions
+}) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.(glsl|vert|frag|vs|fs)$/,
+          exclude: /node_modules/,
+          use: [
+            'raw-loader'
+          ]
+        }
+      ]
+    }
+  })
+}
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 

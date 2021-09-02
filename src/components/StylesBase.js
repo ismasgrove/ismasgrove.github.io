@@ -1,24 +1,41 @@
 import { createGlobalStyle } from 'styled-components'
 
 const StylesBase = createGlobalStyle`
-    --text-link: #E767A8;
+    *::-webkit-scrollbar {
+        height: 6px;
+        width: 6px;
+    }  
+    *::-webkit-scrollbar-track {
+        background: var(--bg-color);
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--scrollable-color);
+    }
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--accents-color) var(--bg-color);
+    }
+    img {
+        font-size: 0px;
+    }
     .light {
-        --bg-color: #fbfbfb;
-        --accents-color: #F1F5F9;
-        --text-color: #4a3b43;
-        --text-highlights: #61306e;
+        --bg-color: #efefef;
+        --scrollable-color: #afafaf;
+        --accents-color: #dbab18;
+        --text-color: #2b3b2e;
+        --text-highlights: #bdab22;
         --headers-color: #45343d;
-        --text-links: #bd2d7c;
-        --nav-buttons-color: #45343d;
-  }
+        --text-links: #9c9709;
+    }
     .dark {
-        --bg-color: #2f2f2f;
-        --accents-color: #9D8491;
+        --bg-color: #1f1f1f;
+        --scrollable-color: #3f3f3f;
+        --not-scrollable-color: #5f5f5f;
+        --accents-color: #bf0059;
         --text-color: #f1f2f3;
-        --text-highlights: #fbfbfb;
+        --text-highlights: #b30b59;
         --headers-color: #ebe6e9;
         --text-links: #bd2d7c;
-        --nav-buttons-color: #ebe6e9;
     }
 `
 

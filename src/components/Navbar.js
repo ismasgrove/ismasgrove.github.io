@@ -1,42 +1,39 @@
 import React, { useContext } from 'react'
-import tw, {styled} from 'twin.macro'
+import 'twin.macro'
 import NavButton from '../components/NavButton'
 
-import { ThemeContext } from './ThemeContext'
+import { SceneContext } from './SceneContext'
 
-
-const ThemeToggleButton = styled.button(({isDark}) => {
-  return [
-  tw`w-7 h-7 justify-end focus:outline-none rounded`,
-  isDark() ? tw`bg-gray-100` : tw`bg-gray-800`
-  ]})
-
-const ThemeToggle = (props) => {
-  const { theme, setTheme } = useContext(ThemeContext)
-  const isDark = () => theme === 'dark'
-  
-  return (
-    <ThemeToggleButton isDark={isDark}
-      title='toggle light/dark mode'
-      onClick={() => setTheme(isDark() ? 'light' : 'dark')}
-      {...props}
-    />
-  )
+const NavContainer = ({ children, ...rest }) => {
+  return <div tw='prose font-mono font-extrabold
+      grid grid-cols-2 justify-between lg:rounded-b-lg border-b-4 
+      border-color[var(--accents-color)] bg-primary z-10'  {...rest}>
+        {children}
+      </div>
 }
 
-export default function Navbar ({ items, ...rest }) {
-  const buttons = Object.keys(items).map((key) =>
-    <NavButton key={key} title={items[key].title} link={items[key].link}>
+export default function Navbar({ children, ...rest }) {
+  const { scene, _ } = useContext(SceneContext)
+  const navbarObjs = {
+    scene: {
+      title: 'SCENE',
+      link: scene
+    },
+    about: {
+      title: 'ABOUT',
+      link: '/about'
+    }
+  }
+  
+  const buttons = Object.keys(navbarObjs).map((key) =>
+    <NavButton key={key} title={navbarObjs[key].title} link={navbarObjs[key].link}>
       objects[item].title
     </NavButton>
   )
 
   return (
-    <div tw='inline-grid grid-cols-2 items-center'  {...rest}>
-      <div tw='inline'>
-        {buttons}
-        </div>
-      <ThemeToggle tw='justify-self-end mr-4 transform duration-100 hover:rotate-45' />
-      </div>
+    <NavContainer {...rest}>
+      {buttons}
+    </NavContainer>
   )
 }

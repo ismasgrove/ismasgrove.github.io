@@ -78,11 +78,10 @@ const Boids = ({flockSize, separVal, alignVal, cohesVal, windVal, bounds, spawnR
         const desiredseparation = 25
         const steer = new Vector3()
         let count = 0
-        // peripheral vision
         for (const neighbor of flockRefs) {
             const dist = bird.position.distanceTo(neighbor.current.position)
             if (dist > 0 && dist < desiredseparation) {
-                const diff = new Vector3().subVectors(neighbor.current.position, bird.position)
+                const diff = new Vector3().subVectors(bird.position, neighbor.current.position)
                 diff.divideScalar(dist)
                 steer.add(diff)
                 count++
@@ -126,7 +125,6 @@ const Boids = ({flockSize, separVal, alignVal, cohesVal, windVal, bounds, spawnR
         const neighbordist = 50
         const sum = new Vector3(0,0,0)
         let count = 0
-        // peripheral vision
         for (const neighbor of flockRefs) {
             const dist = bird.position.distanceTo(neighbor.current.position)
             if (dist > 0 && dist < neighbordist) {
@@ -157,8 +155,11 @@ const Boids = ({flockSize, separVal, alignVal, cohesVal, windVal, bounds, spawnR
         return steer
     }
 
+    
     const flock = []
     const flockRefs = []
+
+    
     for (let i = 0; i < flockSize; i++) {
         const ref = React.useRef()
         flock.push(
@@ -175,6 +176,7 @@ const Boids = ({flockSize, separVal, alignVal, cohesVal, windVal, bounds, spawnR
         )
         flockRefs.push(ref)
     }
+    
 
     useFrame((_, delta) => {
         for (const ref of flockRefs) {

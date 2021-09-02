@@ -2,6 +2,9 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        'mono': ['"Roboto Mono"', '"Space Mono"', 'monospace']
+      },
       backgroundColor: {
         primary: 'var(--bg-color)',
         secondary: 'var(--accents-color)',
@@ -22,8 +25,11 @@ module.exports = {
             a: {
               color: 'var(--text-links)',
               '&:hover': {
-                color: 'var(--text-highlights)'
+                color: 'var(--headers-color)'
               }
+            },
+            strong: {
+              color: 'var(--text-highlights)'
             },
             h1: {
               color: 'var(--headers-color)',

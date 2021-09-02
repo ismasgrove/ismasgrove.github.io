@@ -7,6 +7,6 @@ export const wrapRootElement = ({ element }) => (
     <SceneProvider><ThemeProvider>{element}</ThemeProvider></SceneProvider>
 )
 
-export const wrapPageElement = ({ element }) => {
+export const wrapPageElement = ({ element }) => (
         <Layout>{element}</Layout>
-}
+)

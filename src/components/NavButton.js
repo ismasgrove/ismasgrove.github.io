@@ -3,7 +3,7 @@ import { navigate } from 'gatsby'
 import tw, { styled } from 'twin.macro'
 
 const StyledButton = styled.button(() => [
-  tw`mr-4 text-lg hover:cursor-pointer`
+  tw`hover:cursor-pointer`
 ])
 
 const StyledNavButton = ({ link, title }) => {

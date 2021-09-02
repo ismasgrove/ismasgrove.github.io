@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import React, { useEffect, useMemo, useState } from 'react'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Physics, usePlane, useSphere, useCompoundBody } from '@react-three/cannon'
+import { useFrame, useThree } from '@react-three/fiber'
+import { Physics, useSphere, useCompoundBody } from '@react-three/cannon'
 import { useControls } from 'leva'
 import { paletteLerpRGB } from '../utils/gfx_utils'
 import BackgroundCanvas from '../components/BackgroundCanvas'
@@ -29,7 +29,7 @@ function OpenBox({move, sphereRadius, ...props}) {
 
   useFrame(({ mouse }) => {
     if (!move) {
-      api.rotation.set(0, mouse.x * 0.3, mouse.y * 0.3)
+      api.rotation.set(0, mouse.x * 0.5, mouse.y * 0.3)
     }
   })
 
@@ -72,7 +72,7 @@ function Spheres({ radius, spheres, palette }) {
       array.push(Math.floor(Math.random() * palette.length))
     }
     return array
-  }, [])
+  }, [spheres, palette.length])
 
   const colors = useMemo(() => {
     const array = new Float32Array(spheres * 3)
@@ -82,7 +82,7 @@ function Spheres({ radius, spheres, palette }) {
       color.set(col).convertSRGBToLinear().toArray(array, i*3)
     }
     return array;
-  }, [spheres, palette])
+  }, [spheres, palette, randomArray])
 
   let toReset = []
 

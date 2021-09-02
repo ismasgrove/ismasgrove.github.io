@@ -7,7 +7,8 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'ismasgrove'
+    title: 'ismasgrove',
+    description: 'A playground for React and threejs.'
   },
   plugins: [
     'gatsby-plugin-styled-components',
