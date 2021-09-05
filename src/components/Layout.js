@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
-import { GlobalStyles } from 'twin.macro' 
+import { GlobalStyles } from 'twin.macro'
+
 import StylesBase from './StylesBase'
 import Scene from './Scene'
 import PostContainer from './PostContainer'
@@ -11,12 +10,14 @@ import SceneSelector from './SceneSelector'
 
 const footerInfo = '2021 ©'
 
-const Template = ({children}) => {
-  return (
-    <div tw='
+const Template = ({ children }) => {
+	return (
+		<div
+			tw='
     flex flex-col
     overflow-y-auto overflow-x-hidden
     lg:grid
+
     lg:grid-template-columns[
       [start] 0.5fr
       [footer-post-gap] 0.1fr
@@ -48,27 +49,30 @@ const Template = ({children}) => {
       [scene-footer-gap] 0.3fr
       [footer] 0.2fr
     ]
-    lg:overflow-hidden h-screen'>
-      {children}
-      </div>
-  )
+      
+    lg:overflow-hidden h-screen'
+		>
+			{children}
+		</div>
+	)
 }
 
 const Layout = ({ children }) => {
-  return (
-    <Template>
-      <GlobalStyles />
-      <StylesBase />
-      <Scene tw='lg:col-start-1 lg:col-auto lg:row-start-1 lg:row-auto' />
-      <Navbar tw='min-w-full lg:col-start-7 lg:col-span-1 lg:row-start-1 lg:row-end-1 shadow' />
-      <PostContainer tw='min-h-[40%] overflow-y-auto lg:col-start-2 lg:col-span-3 lg:row-start-3 lg:row-end-3 shadow-2xl'>
-        {children}
-      </PostContainer>
-      <SceneSelector tw='min-w-full flex-shrink-0 lg:flex-auto lg:col-start-6 lg:col-span-3 lg:row-start-5 lg:row-end-5 z-10 shadow-2xl' />
-      <Footer tw='min-w-full lg:col-start-3 lg:col-span-1 lg:row-start-7 lg:row-end-7 lg:text-center shadow-2xl'>
-        {footerInfo}
-      </Footer>
-  </Template>)
+	return (
+		<Template>
+			<GlobalStyles />
+			<StylesBase />
+			<Scene tw='lg:col-start-1 lg:col-auto lg:row-start-1 lg:row-auto' />
+			<Navbar tw='min-w-full lg:col-start-7 lg:col-span-1 lg:row-start-1 lg:row-end-1 shadow' />
+			<PostContainer tw='min-h-[40%] overflow-y-auto lg:col-start-2 lg:col-span-3 lg:row-start-3 lg:row-end-3 shadow-2xl'>
+				{children}
+			</PostContainer>
+			<SceneSelector tw='min-w-full flex-shrink-0 lg:flex-auto lg:col-start-6 lg:col-span-3 lg:row-start-5 lg:row-end-5 z-10 shadow-2xl' />
+			<Footer tw='min-w-full lg:col-start-3 lg:col-span-1 lg:row-start-7 lg:row-end-7 lg:text-center shadow-2xl'>
+				{footerInfo}
+			</Footer>
+		</Template>
+	)
 }
 
 export default Layout
