@@ -61,7 +61,7 @@ const SDFPlane = ({ theme }) => {
 		color: theme === 'dark' ? '#000' : '#fff',
 		outlineColor: theme === 'dark' ? '#bf0059' : '#dbab18',
 	})
-	const texture = useTexture('home_sdf.png')
+	const texture = useTexture('/home_sdf.png')
 	const ref = useRef()
 	useFrame(({ clock }) => {
 		ref.current.uniforms.time.value = clock.getElapsedTime()

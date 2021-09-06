@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useRef } from 'react'
 import { navigate } from 'gatsby'
 import tw from 'twin.macro'
 
@@ -7,9 +7,9 @@ import { scenes } from './Scene'
 
 const SceneMenu = props => {
 	const { scene } = useContext(SceneContext)
-	const ref = React.useRef()
+	const ref = useRef()
 
-	const [scrollable, setScrollable] = React.useState({
+	const [scrollable, setScrollable] = useState({
 		left: false,
 		right: true,
 	})

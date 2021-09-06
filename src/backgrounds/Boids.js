@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { useRef, Suspense } from 'react'
 import { Vector3, Quaternion, Matrix4, DoubleSide } from 'three'
 import { useFrame } from '@react-three/fiber'
 import { OrbitControls, Environment } from '@react-three/drei'
@@ -167,7 +167,7 @@ const Boids = ({
 	const flockRefs = []
 
 	for (let i = 0; i < flockSize; i++) {
-		const ref = React.useRef()
+		const ref = useRef()
 		flock.push(
 			<Bird
 				key={i}

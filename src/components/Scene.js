@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import Flux from '../backgrounds/Flux'
 import Crystal from '../backgrounds/Crystal'
-import InstancedSpheresPhysics from '../backgrounds/InstancedSpheresPhysics'
+import Spheres from '../backgrounds/Spheres'
 import Boids from '../backgrounds/Boids'
 import Landing from '../backgrounds/Landing'
 import { SceneContext } from './SceneContext'
@@ -25,7 +25,7 @@ export default function Scene() {
 			{scene === scenes.LANDING && <Landing theme={theme} />}
 			{scene === scenes.FLUX && <Flux />}
 			{scene === scenes.BOIDS && <Boids />}
-			{scene === scenes.SPHERES && <InstancedSpheresPhysics />}
+			{scene === scenes.SPHERES && <Spheres />}
 			{scene === scenes.CRYSTAL && <Crystal />}
 		</>
 	)
