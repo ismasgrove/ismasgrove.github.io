@@ -1,0 +1,2 @@
+(self.webpackChunkismasgrove=self.webpackChunkismasgrove||[]).push([[883],{9616:function(e,n,t){"use strict";t.r(n);var r=t(5444),u=t(7294);n.default=function(){return u.createElement(u.Fragment,null,u.createElement("h1",null,"404: PAGE NOT FOUND"),u.createElement("p",null,"but you can return home from ",u.createElement(r.Link,{to:"/"},"here"),"."))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-7a37a8b788b33f8f8609.js.map

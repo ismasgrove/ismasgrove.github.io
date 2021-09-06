@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-content-js",
+    "path": "/crystal/",
+    "result": {"data":{"markdownRemark":{"html":"<p>This one is only here because it was the very first one. I did something quick just to try out r3f. It was the only scene here for a while before I started gaining momentum.</p>\n<p>If there's something funny about this, it's how I used the same object in my <a href=\"https://github.com/ismasgrove/raytracing\">Raytracing</a> project, using the same constructive technique I used there (two pyramids on top of each other) without realizing that an Octahedron geometry exists in THREE.</p>","frontmatter":{"title":"crystal","sceneCode":"CRYSTAL"}}},"pageContext":{"slug":"/crystal/"}},
+    "staticQueryHashes": []}
