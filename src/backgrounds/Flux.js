@@ -68,7 +68,11 @@ const Lights = () => {
 	const ref = useRef()
 	return (
 		<>
-			<pointLight ref={ref} position={[0, 0, 0]} args={[0xff00ff, 5, 100, 1]} />
+			<pointLight
+				ref={ref}
+				position={[0, 0, 0]}
+				args={[0xff00ff, 15, 100, 1]}
+			/>
 			<hemisphereLight intensity={0.045} />
 		</>
 	)
@@ -85,7 +89,11 @@ const CameraMove = () => {
 
 export default function Flux() {
 	return (
-		<BackgroundCanvas camera={{ near: 5 }}>
+		<BackgroundCanvas
+			colorManagement
+			gl={{ alpha: false }}
+			camera={{ near: 5 }}
+		>
 			<Lights />
 			<color attach='background' args={['black']} />
 			<TileForest />
@@ -100,7 +108,7 @@ export default function Flux() {
 					width={720}
 				/>
 				<Glitch
-					delay={[2.5, 4]}
+					delay={[4, 5.5]}
 					duration={[0.2, 0.4]}
 					strength={[0.1, 0.3]}
 					active

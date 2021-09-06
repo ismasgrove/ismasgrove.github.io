@@ -4,4 +4,4 @@ title: 'home'
 sceneCode: 'LANDING'
 ---
 
-There is no 'home' scene yet. Pretty funny, once would think it should be the first one to make. Oh well.
+A home scene should be simple and not overwhelming, so I settled for a sign. However, it's a sign generated using [this 512x512](/home_sdf.jpg) as a Signed Distance Field texture and some shading, which is a technique [commonly used](https://www.youtube.com/watch?v=1b5hIMqz_wM) to render text on top of 3D in a way that scales well. You can toy with its parameters using [leva's](https://github.com/pmndrs/leva) controller.

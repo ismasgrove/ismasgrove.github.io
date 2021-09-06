@@ -53,7 +53,6 @@ const SceneMenu = props => {
 					tw='min-w-max self-center cursor-pointer'
 					onClick={() => {
 						if (scenes[sceneObj] != scene) {
-							console.log(sceneObj, scene)
 							navigate(scenes[sceneObj])
 						}
 					}}

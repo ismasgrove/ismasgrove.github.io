@@ -4,11 +4,9 @@ import { SceneProvider } from './src/components/SceneContext'
 import { ThemeProvider } from './src/components/ThemeContext'
 
 export const wrapRootElement = ({ element }) => (
-    <SceneProvider><ThemeProvider>{element}</ThemeProvider></SceneProvider>
+	<ThemeProvider>
+		<SceneProvider>{element}</SceneProvider>
+	</ThemeProvider>
 )
 
-export const wrapPageElement = ({ element }) => (
-        <Layout>
-            {element}
-        </Layout>
-)
+export const wrapPageElement = ({ element }) => <Layout>{element}</Layout>

@@ -6,23 +6,27 @@ import InstancedSpheresPhysics from '../backgrounds/InstancedSpheresPhysics'
 import Boids from '../backgrounds/Boids'
 import Landing from '../backgrounds/Landing'
 import { SceneContext } from './SceneContext'
+import { ThemeContext } from './ThemeContext'
 import 'twin.macro'
 
 export const scenes = {
-  LANDING: '/',
-  FLUX: '/flux',
-  BOIDS: '/boids',
-  SPHERES: '/spheres',
-  CRYSTAL: '/crystal'
+	LANDING: '/',
+	FLUX: '/flux',
+	BOIDS: '/boids',
+	SPHERES: '/spheres',
+	CRYSTAL: '/crystal',
 }
 
-export default function Scene () {
-  const { scene } = useContext(SceneContext)
-  return <>
-    {scene === scenes.LANDING && <Landing />}
-    {scene === scenes.FLUX && <Flux />}
-    {scene === scenes.BOIDS && <Boids />}
-    {scene === scenes.SPHERES && <InstancedSpheresPhysics />}
-    {scene === scenes.CRYSTAL && <Crystal />}   
-  </>
+export default function Scene() {
+	const { scene } = useContext(SceneContext)
+	const { theme } = useContext(ThemeContext)
+	return (
+		<>
+			{scene === scenes.LANDING && <Landing theme={theme} />}
+			{scene === scenes.FLUX && <Flux />}
+			{scene === scenes.BOIDS && <Boids />}
+			{scene === scenes.SPHERES && <InstancedSpheresPhysics />}
+			{scene === scenes.CRYSTAL && <Crystal />}
+		</>
+	)
 }

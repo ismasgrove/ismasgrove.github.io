@@ -3,6 +3,13 @@
 varying vec2 vUv;
 
 uniform float time;
+uniform float thickness;
+uniform float softness;
+uniform vec3 color;
+uniform vec3 outline_color;
+uniform float outline_thickness;
+uniform float outline_softness;
+uniform sampler2D uTexture;
 
 float random(vec2 st) {
     return fract(sin(dot(st.xy, vec2(12.9898, 78.233))) * 43758.5453123);
@@ -50,23 +57,11 @@ float cnoise(vec2 P){
 
 void main()
 {
-    // vec2 st = vec2(
-    //     vUv.x + cos(vUv.y * 100.) * 0.1,
-    //     vUv.y + sin(vUv.x * 100.) * 0.1
-    // );
-    // float param = 1. - step(0.01, abs(distance(st, vec2(0.5)) - 0.25));
-    // float param = atan(vUv.x - 0.5, vUv.y - 0.5);
-    // param += PI;
-    // param /= 2. * PI;
+    vec4 tex = texture2D(uTexture, vUv);
 
-    // vec2 st = vUv - 0.5;
-    // float angle = atan(st.y, st.x);
-    // float s = sin(angle * 20.);
-    // float radius = 0.25 + s * 0.01;
+    float alpha = tex.r;
+    float outline = smoothstep(outline_thickness - outline_softness, outline_thickness + outline_softness, alpha);
+    alpha = smoothstep(1. - thickness - softness, 1. - thickness + softness, alpha);
 
-    // float param = 1. - step(0.01, abs(distance(vUv, vec2(0.5)) - radius));
-
-    float param = abs(cnoise(vUv * 10.));// + 10. * sin(time)));
-
-    gl_FragColor = vec4(vec3(param), 1.);
+    gl_FragColor = vec4(mix(outline_color, color, outline), alpha);
 }
