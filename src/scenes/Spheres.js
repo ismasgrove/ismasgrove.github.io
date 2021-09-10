@@ -175,16 +175,16 @@ function LookAt({ x_offset, y_offset }) {
 }
 
 export default function SpheresDemo() {
-	const { colorA, colorB, colors, spheres } = useControls({
+	const { colorA, colorB, colorsAmount, spheresAmount } = useControls({
 		colorA: '#59f9ff',
 		colorB: '#9e2eb4',
-		colors: {
+		colorsAmount: {
 			value: 256,
 			min: 1,
 			max: 512,
 			step: 1,
 		},
-		spheres: {
+		spheresAmount: {
 			value: 200,
 			min: 50,
 			max: 500,
@@ -197,7 +197,7 @@ export default function SpheresDemo() {
 	const colorA_THREE = new THREE.Color(colorA)
 	const colorB_THREE = new THREE.Color(colorB)
 
-	const palette = paletteLerpRGB(colorA_THREE, colorB_THREE, colors)
+	const palette = paletteLerpRGB(colorA_THREE, colorB_THREE, colorsAmount)
 
 	const [move, setMove] = useState(false)
 
@@ -227,11 +227,15 @@ export default function SpheresDemo() {
 			<Physics
 				iterations={20}
 				tolerance={0.0001}
-				key={spheres}
+				key={spheresAmount}
 				broadphase='Naive'
 				allowSleep={false}
 			>
-				<Spheres radius={sphereRadius} palette={palette} spheres={spheres} />
+				<Spheres
+					radius={sphereRadius}
+					palette={palette}
+					spheres={spheresAmount}
+				/>
 				<OpenBox sphereRadius={sphereRadius} move={move} />
 			</Physics>
 		</BackgroundCanvas>

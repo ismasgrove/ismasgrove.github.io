@@ -7,6 +7,7 @@ import { useControls } from 'leva'
 import frag from './shaders/home/frag.glsl'
 import vert from './shaders/home/vertex.glsl'
 import BackgroundCanvas from '../components/BackgroundCanvas'
+import home_sdf from '../images/home_sdf.png'
 
 const PlaneMaterial = shaderMaterial(
 	{
@@ -61,7 +62,7 @@ const SDFPlane = ({ theme }) => {
 		color: theme === 'dark' ? '#000' : '#fff',
 		outlineColor: theme === 'dark' ? '#bf0059' : '#dbab18',
 	})
-	const texture = useTexture('/home_sdf.png')
+	const texture = useTexture(home_sdf)
 	const ref = useRef()
 	useFrame(({ clock }) => {
 		ref.current.uniforms.time.value = clock.getElapsedTime()

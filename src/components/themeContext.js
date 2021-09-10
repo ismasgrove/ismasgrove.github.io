@@ -13,7 +13,7 @@ const getInitialTheme = () => {
 		}
 	}
 
-	return 'light'
+	return 'dark'
 }
 
 const ThemeContext = createContext()
