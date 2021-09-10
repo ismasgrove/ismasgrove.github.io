@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-content-js",
     "path": "/flux/",
-    "result": {"data":{"markdownRemark":{"html":"<p>I was playing with planes when I made this. Literally filled the screen with planes, did random things with them and just let them guide me. This scene is a group of plane stacks rotating around an axis with a colored light source.</p>\n<p>Sessions like this show you how powerful primitives are.</p>","frontmatter":{"title":"flux","sceneCode":"FLUX"}}},"pageContext":{"slug":"/flux/"}},
+    "result": {"data":{"markdownRemark":{"html":"<p>I was playing with planes when I made this. Literally filled the screen with planes, did random things with them and just let them guide me. This scene is a group of plane stacks rotating around an axis with a colored light source and some postprocessing.</p>\n<p>Little do you know, you play with a primitive randomly and something relatively aesthetically pleasing can come up. Serves to show how powerful primitives are.</p>","frontmatter":{"title":"flux","sceneCode":"FLUX"}}},"pageContext":{"slug":"/flux/"}},
     "staticQueryHashes": []}
